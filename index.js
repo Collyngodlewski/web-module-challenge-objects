@@ -29,6 +29,9 @@ Test your createMenuItems function by doing the following:
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
 
+console.log(createMenuItem('pizza', 5, 'dinner'));
+console.log(createMenuItem('hotdog', 10, 'breakfast'));
+console.log(createMenuItem('hamburger', 8, 'lunch'));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -48,7 +51,17 @@ const burger = {
   price: 18, 
   category: "Lunch", 
   
-}
+  discount: function(string){
+    if(string === 'teacher' || string === 'student' ){
+      return this.price - (this.price*.25)
+    } else if(string === 'public'){
+      return this.price - (this.price*.1);
+    }
+    }
+  }
+  console.log(burger.discount('public'));
+
+
 
 
 
@@ -108,7 +121,7 @@ Use the getReviewByIndex function below to do the following:
 
 
 function getReviewByIndex(/*Your code here*/) {
-  /*Your code here*/
+  // /*Your code here*/ array[index].name gave the restaurant
 }
 
 
@@ -129,6 +142,7 @@ Use the getLastReview function below to do the following:
 function getLastReview(/*Your code here*/) {
   /*Your code here*/
 } 
+// array[array.length -1];
 
 
 
