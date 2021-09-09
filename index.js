@@ -106,10 +106,12 @@ Write a function that creates an object with name, rating, feedback, add the new
   4. should return the resulting array
 */
 
-function addReview(name, rating, feedback){
-  return {name, rating, feedback};
+function addReview(array, name, rating, feedback){
+array.push({ name, rating, feedback});
+return array;
+  
 }
-  console.log(addReview('Collyn', 8.5, 'smelly'));
+  console.log(addReview(reviews,'Collyn', 8.5, 'smelly'));
 
   /*Your Code Here */
 
@@ -146,7 +148,7 @@ Use the getLastReview function below to do the following:
 
 
 function getLastReview(array) {
-  return `${array[array.length-1].name} gave the restaurant a ${array[array.length-1].rating} star reviews, and their feedback was: ${array[array.length-1].feedback}`
+  return `${array[array.length-1].name} gave the restaurant a ${array[array.length-1].rating} star review, and their feedback was: ${array[array.length-1].feedback}`
 } 
 
 console.log(getLastReview(reviews));
